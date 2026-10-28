@@ -1,0 +1,174 @@
+main p, main small {
+    margin: 10px 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: flex-start;
+    }
+
+    h2 {
+        font-size: 27px;
+        color: var(--text-colored, transparent);
+    }
+
+    h3, h4 {
+        color: var(--text-colored, transparent);
+    }
+
+    hr {
+        border: none;
+        border-bottom: 2px dashed var(--border-hr, transparent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        &::after {
+            content: "♥";
+            font-size: 40px;
+            color: var(--border-hr, transparent);
+
+            text-shadow:
+                3px 3px 0 var(--background-group, transparent),
+                -3px 3px 0 var(--background-group, transparent),
+                3px -3px 0 var(--background-group, transparent),
+                -3px -3px 0 var(--background-group, transparent);
+
+            position: absolute;
+        }
+    }
+
+    .list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        li {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            margin-left: 20px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 10px;
+                height: 14px;
+                background: var(--text-colored, transparent);
+                border-radius: 50%;
+                left: -20px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 10px;
+                border-left: 1.5px solid var(--background-group, transparent);
+                border-radius: 50%;
+                left: -16px;
+                transform: rotate(10deg);
+            }
+        }
+    }
+
+    .highlight {
+        background: var(--background-highlight, transparent);
+        border: 2px solid var(--border-highlight, transparent);
+        border-radius: 3px;
+
+        padding: 15px 0 15px 0;
+
+        > * {
+            margin: 0 10px 0 10px;
+        }
+    }
+
+    .button {
+        border: 3px solid var(--border-button, transparent);
+        
+        border-radius: 10px;
+        background: var(--background-button, transparent);
+
+        overflow: hidden;
+
+        transition: transform var(--transition-standard), box-shadow var(--transition-standard), filter var(--transition-standard);
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 10px 10px 12px rgba(0, 0, 0, .5);
+            filter: brightness(1.15);
+        }
+        &:active {
+            transform: scale(1);
+        }
+    }
+
+    .warn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        background: linear-gradient(135deg, #FDBA13, #FDBA13, #FDBA13);
+        border: 2px solid #0a0a0a;
+        border-radius: 8px;
+
+        color: #0a0a0a;
+        padding: 12px 14px;
+
+        &::before {
+            content: "\26A0";
+        }
+
+        > * {
+            flex: 1;
+            margin: 0;
+        }
+        span {
+            font-weight: bold;
+            color: #221b11;
+        }
+    }
+
+    table {
+        border-spacing: 0;
+        border-radius: 12.5px;
+
+        th {
+            background: var(--background-highlight);
+        }
+
+        th, td {
+            padding: 8px;
+        }
+        
+        tr:first-child th:first-child {
+            border-top-left-radius: 10px;
+        }
+        tr:first-child td:last-child {
+            border-top-right-radius: 10px;
+        }
+        tr:last-child th:first-child {
+            border-bottom-left-radius: 10px;
+        }
+        tr:last-child td:last-child {
+            border-bottom-right-radius: 10px;
+        }
+    }
+
+    table, table th, table td {
+        border: 1.5px solid var(--border-highlight, transparent);
+    }
+}
