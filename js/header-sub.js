@@ -1,34 +1,22 @@
 export function init() {
     const sidebars = {
-        "wrapper-header-main": document.getElementById("wrapper-header-main"),
-        "wrapper-aside": document.getElementById("wrapper-aside")
+        "header-main": document.getElementById("wrapper-header-main"),
+        "aside": document.getElementById("wrapper-aside")
     }
 
-    async function closeAll() {
-        sidebars["wrapper-header-main"].classList.remove("active")
-        sidebars["wrapper-aside"].classList.remove("active")
+    async function closeSideBars() {
+        sidebars["header-main"].classList.remove("active")
+        sidebars["aside"].classList.remove("active")
     }
 
     // Header Sub
 
-    const activateButtons = document.querySelectorAll(".sidebar-active")
+    async function openSideBar(sidebar) {
+        await closeSideBars()
 
-    activateButtons.forEach(el => {
-        el.addEventListener("click", async () => {
-            await closeAll()
+        sidebars[sidebar].classList.add("active")
+    }
 
-            const type = el.getAttribute("data-sidebar-target")
-            sidebars[type].classList.add("active")
-        })
-    })
-
-    // Wrappers
-
-    const closeButtons = document.querySelectorAll(".sidebar-close")
-
-    closeButtons.forEach(el => {
-        el.addEventListener("click", () => {
-            closeAll()
-        })
-    })
+    window.openSideBar = openSideBar
+    window.closeSideBars = closeSideBars
 }

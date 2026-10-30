@@ -116,8 +116,8 @@ main #sub {
                     &::before {
                         content: counter(item) ". ";
                     }
+                    transition: background-color var(--transition-standard);
                     &:hover {
-                        transition: var(--transition-standard);
                         background: var(--background-highlight, transparent);
                         color: var(--text-colored, transparent);
                     }
@@ -172,4 +172,77 @@ main #sub {
             }
         }
     }
+}
+
+main #popUp {
+    transform: translate(-50%, -50%) scale(0);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    transition: transform var(--transition-standard);
+
+    z-index: 999;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3, button {
+            display: inline-block;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        list-style-type: none;
+
+        li a {
+            padding: 10px;
+            background: linear-gradient(var(--p-bg1), var(--p-bg2));
+            border: 2px solid var(--p-bd);
+            color: var(--p-c);
+            border-radius: 5px;
+            text-decoration: none;
+            transition: filter var(--transition-standard), transform var(--transition-standard);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            b {
+                font-size: 20px;
+            }
+
+            &:hover {
+                filter: brightness(1.1);
+                transform: scale(1.05);
+            }
+        }
+    }
+    button {
+        border: none;
+        border-radius: 5px;
+        background: red;
+        height: 24px;
+        transition: background-color var(--transition-standard);
+
+        &:hover {
+            cursor: pointer;
+            background: #ff3535;
+        }
+    }
+}
+
+main #popUp.active {
+    display: flex;
+    transform: translate(-50%, -50%) scale(1);
 }
