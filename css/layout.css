@@ -136,7 +136,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
     #wrapper-header-main {
-        z-index: 5;
+        z-index: 10;
         height: 100dvh;
         min-height: 100dvh;
         height: 100dvh;
@@ -156,7 +156,7 @@ footer {
     }
 
     #wrapper-aside {
-        z-index: 5;
+        z-index: 10;
         height: 100dvh;
         min-height: 100dvh;
         height: 100dvh;

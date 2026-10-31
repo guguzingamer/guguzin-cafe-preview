@@ -6,6 +6,8 @@ var scriptsToLoad = [
 	"theme.js",
 	"components.js",
 	"fetch-news.js",
+
+	"overlay.js",
 	"header-sub.js",
 
 	"fa.js",

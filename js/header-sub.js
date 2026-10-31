@@ -7,6 +7,7 @@ export function init() {
     async function closeSideBars() {
         sidebars["header-main"].classList.remove("active")
         sidebars["aside"].classList.remove("active")
+        overlayClose("sidebar")
     }
 
     // Header Sub
@@ -15,6 +16,7 @@ export function init() {
         await closeSideBars()
 
         sidebars[sidebar].classList.add("active")
+        overlayActive("sidebar")
     }
 
     window.openSideBar = openSideBar

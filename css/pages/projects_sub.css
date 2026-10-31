@@ -174,7 +174,7 @@ main #sub {
     }
 }
 
-main #popUp {
+#popUp {
     transform: translate(-50%, -50%) scale(0);
     position: fixed;
     top: 50%;
@@ -184,6 +184,7 @@ main #popUp {
     gap: 20px;
 
     padding: 20px;
+    width: max-content;
 
     transition: transform var(--transition-standard);
 
@@ -242,7 +243,28 @@ main #popUp {
     }
 }
 
-main #popUp.active {
+#popUp.active {
     display: flex;
     transform: translate(-50%, -50%) scale(1);
+}
+
+#popUp {
+    .curseforge {
+        --p-bd: #F16436;
+        --p-bg1: #502112;
+        --p-bg2: black;
+        --p-c: #F16436;
+    }
+    .modrinth {
+        --p-bd: #00AF5C;
+        --p-bg1: #003a1f;
+        --p-bg2: black;
+        --p-c: #00AF5C;
+    }
+    .planet-minecraft {
+        --p-bd: #4ba8ff;
+        --p-bg1: #2a5401;
+        --p-bg2: black;
+        --p-c: #4ba8ff;
+    }
 }

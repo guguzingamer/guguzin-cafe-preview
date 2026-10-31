@@ -87,37 +87,6 @@
 				</div>
 			</div>
 
-			<div id="popUp" class="board">
-				<div>
-					<h3>Links</h3>
-					<button onclick="closePopUp()">
-						<span class="material-symbols-outlined">
-							close
-						</span>
-					</button>
-				</div>
-				<ul>
-					<li>
-						<a href="https://www.curseforge.com/minecraft/texture-packs/simply-alive" target="_blank" rel="noopener noreferrer" class="hover" style="--p-bd: #F16436; --p-bg1: #502112; --p-bg2: black; --p-c: #F16436;">
-							<img height="32" width="32" src="https://cdn.simpleicons.org/curseforge"/>
-							<b>Curseforge</b>
-						</a>
-					</li>
-					<li>
-						<a href="https://modrinth.com/resourcepack/simply-alive" target="_blank" rel="noopener noreferrer" class="hover" style="--p-bd: #00AF5C; --p-bg1: #003a1f; --p-bg2: black; --p-c: #00AF5C">
-							<img height="32" width="32" src="https://cdn.simpleicons.org/modrinth"/>
-							<b>Modrinth</b>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.planetminecraft.com/texture-pack/simply-alive/" target="_blank" rel="noopener noreferrer" class="hover" style="--p-bd: #2a5401; --p-bg1: #6ec310; --p-bg2: #0157a9; --p-c: black;">
-							<img height="32" width="32" src="assets/brands/planetminecraft.png"/>
-							<b>Planet Minecraft</b>
-						</a>
-					</li>
-				</ul>
-			</div>
-
 			<section id="description">
 				<h4>Description</h4>
 				<p>Guguzin Gamer's Café is my official website! It's basically my own corner of the internet, where I can centralize my projects and some other stuff, like the development, some features and notes.</p>
@@ -155,6 +124,39 @@
 			</section>
 		</main>
 
+		<!-- Pop Up -->
+
+		<div id="popUp" class="board">
+				<div>
+					<h3>Links:</h3>
+					<button onclick="closePopUp()">
+						<span class="material-symbols-outlined">
+							close
+						</span>
+					</button>
+				</div>
+				<ul>
+					<li>
+						<a href="https://www.curseforge.com/minecraft/texture-packs/simply-alive" target="_blank" rel="noopener noreferrer" class="hover curseforge">
+							<img height="32" width="32" src="https://cdn.simpleicons.org/curseforge"/>
+							<b>Curseforge</b>
+						</a>
+					</li>
+					<li>
+						<a href="https://modrinth.com/resourcepack/simply-alive" target="_blank" rel="noopener noreferrer" class="hover modrinth">
+							<img height="32" width="32" src="https://cdn.simpleicons.org/modrinth"/>
+							<b>Modrinth</b>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.planetminecraft.com/texture-pack/simply-alive/" target="_blank" rel="noopener noreferrer" class="hover planet-minecraft">
+							<img height="32" width="32" src="assets/brands/planetminecraft.png"/>
+							<b>Planet Minecraft</b>
+						</a>
+					</li>
+				</ul>
+			</div>
+
 
 
 		<!----------------------------------------------------------------------------------------------------->
@@ -170,12 +172,12 @@
 		<div id="wrapper-aside"></div>
 	</div>
 
-	<footer id="footer" class="board">
+	<footer id="footer" class="board"></footer>
 
-	</footer>
+	<button id="overlay" onclick="overlayClick()"></button>
 
 	<!-- javascript -->
-	<custom-script src="js/pages/projects_sub.js""></custom-script>
+	<custom-script src="js/pages/projects_sub.js"></custom-script>
 	<script src="script.js"></script>
 </body>
 </html>
