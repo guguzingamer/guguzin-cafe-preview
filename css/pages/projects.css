@@ -6,6 +6,18 @@ main section {
     gap: 18px;
 }
 
+main #plans {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style-type: none;
+
+    small {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
 main .projects-list {
     list-style: none;
     display: flex;

@@ -37,7 +37,7 @@
 			<section id="theme" class="grid">
 				<h3>Color Theme</h3>
 				<p>Select your browser theme!</p>
-				<fieldset action="" id="theme-field">
+				<fieldset id="theme-field">
 
 					<label for="sync" class="button hover">
 						<div class="img st">
@@ -175,6 +175,50 @@
 					<p>Disables the smooth animations.</p>
 				</div>
 				<input type="checkbox" name="reduce-motion" id="reduce-motion-toggle">
+			</section>
+
+			<section id="images-layout" class="grid">
+				<h3>Images Layout</h3>
+				<p>Select the layout style for multiple images rendering!</p>
+				<fieldset>
+					<label for="carousel" class="button hover">
+						<div id="il-carousel" class="img">
+							<div id="crs-upper">
+								<div class="crs-b">
+									<i class="fa-solid fa-arrow-left"></i>
+								</div>
+								<div id="crs-img" class="group"></div>
+								<div class="crs-b">
+									<i class="fa-solid fa-arrow-right"></i>
+								</div>
+							</div>
+							<div id="crs-dots">
+								<div></div>
+								<div></div>
+								<div></div>
+								<div></div>
+							</div>
+						</div>
+
+						<div class="text">
+							<input type="radio" name="images-layout" id="carousel">
+							<span>Carousel</span>
+						</div>
+					</label>
+					<label for="grid" class="button hover">
+						<div id="il-grid" class="img">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+
+						<div class="text">
+							<input type="radio" name="images-layout" id="grid">
+							<span>Grid</span>
+						</div>
+					</label>
+				</fieldset>
 			</section>
 		</main>
 

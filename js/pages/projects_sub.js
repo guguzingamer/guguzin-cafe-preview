@@ -13,4 +13,14 @@ export function init() {
 
     window.openPopUp = openPopUp
     window.closePopUp = closePopUp
+
+    const ol = document.querySelector("#nav-ol")
+
+    const links = ol.querySelectorAll("li a")
+    const arch = window.location.pathname.split('/').pop();
+    
+    links.forEach(link => {
+        const href = link.getAttribute("href")
+        link.setAttribute("href", "pages/projects/" + arch + href)
+    })
 }

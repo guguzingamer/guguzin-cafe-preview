@@ -1,8 +1,9 @@
-// script.js version: 1.0-4
+// script.js version: preview 1.4
 
 // ----- Config here! -----
 
 var scriptsToLoad = [
+	"storage-checker.js",
 	"theme.js",
 	"components.js",
 	"fetch-news.js",

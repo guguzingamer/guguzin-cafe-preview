@@ -1,11 +1,7 @@
 // Get theme
 
 function getTheme() {
-    if (!localStorage.getItem("theme")) {
-        localStorage.setItem("theme", "sync")
-    }
-
-    return localStorage.getItem("theme") || "sync";
+    return localStorage.getItem("theme");
 }
 
 // Apply theme
@@ -15,9 +11,15 @@ const syncOpt = document.querySelector("label[for='sync']")
 function applyTheme(sysTheme) {
     const preference = getTheme();
 
-    const theme = preference === "sync"
-        ? (sysTheme.matches ? "dark" : "light")
-        : preference;
+    let theme = preference;
+
+    if (preference === "sync") {
+        if (sysTheme.matches) {
+            theme = "dark";
+        } else {
+            theme = "light";
+        }
+    }
 
     document.documentElement.dataset.theme = theme;
 
