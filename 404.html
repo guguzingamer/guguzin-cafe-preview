@@ -40,7 +40,16 @@
 		</div>
 	</div>
 
-	<script src="js/theme.js"></script>
-	<script src="js/fa.js"></script>
+	<script type="module">
+		const imported = {
+			"storage-checker": await import("./js/storage-checker.js"),
+			"theme": await import("./js/theme.js"),
+			"fa": await import("./js/fa.js")
+		};
+
+		Object.values(imported).forEach(module => {
+			module.init();
+		});
+	</script>
 </body>
 </html>
