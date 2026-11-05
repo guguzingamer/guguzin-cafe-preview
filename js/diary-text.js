@@ -18,7 +18,7 @@ export async function init() {
         friday: "Absolute Cinema day!",
         saturday: "Let's go gaming! Best day of the week.",
 
-        "05/01": "One more year!",
+        "05/01": "Today is a SPECIAl day!",
         "05/02": "Don't let your flame be extinguished",
         "04/10": "Look at this lol: <a href='assets/wizardofgreed.png' class='link' target='_black' rel='noopener noreferrer'>wizardofgreed.png</a>",
 

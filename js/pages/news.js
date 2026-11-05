@@ -56,7 +56,8 @@ async function loadNewsPage(src, newsContainer) {
     const newSmall = createNewsText("small", "date", date)
 
     newA.classList.add("button", "hover", "internal-html")
-    newA.href = src
+
+    newA.href = src.replace(".html", "")
 
     newA.append(newImg)
     newA.append(newH3)

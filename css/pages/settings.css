@@ -312,11 +312,11 @@ main {
             }
             .crs-b {
                 margin: 0 -10px 0 -10px;
-                background: var(--background-nav-button);
+                background: var(--background-button);
                 width: 25px;
                 height: 25px;
                 border-radius: 50%;
-                border: 2px solid var(--border-nav-button);
+                border: 2px solid var(--border-button);
                 z-index: 2;
             }
         }
@@ -326,16 +326,16 @@ main {
             align-items: center;
 
             div:first-child {
-                background: var(--background-nav-button-selected);
-                border: 2px solid var(--border-nav-button-selected);  
+                background: var(--background-button-selected);
+                border: 2px solid var(--border-button-selected);  
             }
 
             div {
                 width: 15px;
                 height: 15px;
                 border-radius: 50%;
-                background: var(--background-nav-button);
-                border: 2px solid var(--border-nav-button);
+                background: var(--background-button);
+                border: 2px solid var(--border-button);
             }
         }
     }
