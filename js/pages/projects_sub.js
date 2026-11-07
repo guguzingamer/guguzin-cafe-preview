@@ -163,4 +163,44 @@ export async function init() {
     if (await getImagesLayout() === "carousel") {
         await adjustCarousel()
     }
+
+    // FAQ
+
+    const faqDetails = document.querySelectorAll("#faq-div details")
+
+    faqDetails.forEach(details => {
+        const summary = details.querySelector("summary")
+        const answer = details.querySelector(".faq-answer")
+
+        summary.addEventListener("click", (event) => {
+            event.preventDefault()
+
+            if (details.open) {
+                answer.style.maxHeight = `${answer.scrollHeight}px`;
+
+                requestAnimationFrame(() => {
+                    answer.style.maxHeight = "0px";
+                });
+
+                answer.addEventListener("transitionend", () => {
+                    details.open = false
+                }, {once: true})
+            }
+            else {
+                details.open = true
+                answer.style.maxHeight = "0px";
+
+                requestAnimationFrame(() => {
+                    answer.style.maxHeight = `${answer.scrollHeight}px`;
+                });
+            }
+        })
+        const resizeObserver = new ResizeObserver(() => {
+            if (faq.open) {
+                answer.style.maxHeight = `${answer.scrollHeight}px`;
+            }
+        });
+
+        resizeObserver.observe(answer);
+    })
 }

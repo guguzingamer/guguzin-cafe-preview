@@ -456,19 +456,29 @@ main #gallery {
     }
 }
 
-main #faqs-div {
+main #faq-div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
     
     details {
         display: block;
-        border: 2px solid var(--border-wood);
-
-        &::details-content {
-            height: 0;
-            overflow: clip;
-            transition: height var(--transition-slow), content-visibility var(--transition-slow) allow-discrete;
+        border: 2px solid var(--border-group);
+        border-radius: 10px;
+        padding: 10px;
+        
+        summary {
+            color: var(--text-colored);
+            &:hover {
+                cursor: pointer;
+            }
         }
-        &[open]::details-content {
-            height: auto;
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-slow);
         }
     }
 }
