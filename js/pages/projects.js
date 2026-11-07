@@ -56,7 +56,7 @@ async function createProjectA(src, sectionUl) {
 export async function init() {
     const sections = document.querySelectorAll("section")
 
-    const projectsList = await fetch("data/projects.json")
+    const projectsList = await fetch("/guguzin-cafe-preview/data/projects.json")
 
     if (!projectsList) {
         console.warn("Data projects.json could not be loaded!")
@@ -70,7 +70,7 @@ export async function init() {
         const sectionUl = section.querySelector("ul");
 
         for (const projectName of json.projects_list[category]) {
-            await createProjectA(`pages/projects/${projectName}.html`, sectionUl);
+            await createProjectA(`/guguzin-cafe-preview/pages/projects/${projectName}.html`, sectionUl);
         }
     }
 }

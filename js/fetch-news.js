@@ -1,5 +1,5 @@
 async function getLatestArticles() {
-    const response = await fetch("data/news.json");
+    const response = await fetch("/guguzin-cafe-preview/data/news.json");
 
     if (!response.ok) {
         throw new Error("Data news.json wasn't able to be loaded!");
@@ -54,7 +54,7 @@ async function loadArticleToAside(src, asideUl) {
     const newP = createAsideText("p", "summary", summary)
     const newSmall = createAsideText("small", "date", date)
 
-    newA.classList.add("group")
+    newA.classList.add("group", "internal-html")
     newA.href = src
 
     newA.append(newImg)
@@ -71,6 +71,6 @@ export async function init() {
     const latestNews = await getLatestArticles()
 
     for (const article of latestNews) {
-        await loadArticleToAside("pages/news/" + article, asideUl);
+        await loadArticleToAside("/guguzin-cafe-preview/pages/news/" + article, asideUl);
     }
 }

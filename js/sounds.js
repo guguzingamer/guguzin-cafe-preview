@@ -26,7 +26,7 @@ function storeSound(enabled) {
 }
 
 export function init() {
-    const hoverSound = new Audio("assets/sounds/hover.mp3")
+    const hoverSound = new Audio("/guguzin-cafe-preview/assets/sounds/hover.mp3")
 
     getSound()
     const elements = document.querySelectorAll(".hover")

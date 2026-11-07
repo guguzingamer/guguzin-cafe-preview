@@ -1,7 +1,7 @@
 async function loadAllComponents(list) {
     await Promise.all(
         list.map(async item => {
-            const path = ("components/"+item+".html")
+            const path = ("/guguzin-cafe-preview/components/"+item+".html")
             const mPath = path.replace("wrapper-", "")
 
             const response = await fetch(mPath)

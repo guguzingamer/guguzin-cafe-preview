@@ -20,7 +20,7 @@ export async function init() {
 
         "05/01": "Today is a SPECIAl day!",
         "05/02": "Don't let your flame be extinguished",
-        "04/10": "Look at this lol: <a href='assets/wizardofgreed.png' class='link' target='_black' rel='noopener noreferrer'>wizardofgreed.png</a>",
+        "04/10": "Look at this lol: <a href='/guguzin-cafe-preview/assets/wizardofgreed.png' class='link' target='_black' rel='noopener noreferrer'>wizardofgreed.png</a>",
 
         "01/01": "<i>NEW YEAR!</i>",
 

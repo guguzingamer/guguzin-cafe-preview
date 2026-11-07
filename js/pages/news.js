@@ -73,7 +73,7 @@ async function loadNewsPage(src, newsContainer) {
 export async function init() {
     const newsContainer = document.querySelector("#news-container")
 
-    const newsList = await fetch("data/news.json")
+    const newsList = await fetch("/guguzin-cafe-preview/data/news.json")
 
     if (!newsList) {
         console.warn("Data news.json could not be loaded!")
@@ -88,12 +88,12 @@ export async function init() {
         }
 
         if (first == true) {
-            const featured = await loadNewsPage(`pages/news/${article}.html`, newsContainer)
+            const featured = await loadNewsPage(`/guguzin-cafe-preview/pages/news/${article}.html`, newsContainer)
             adaptFeatured(featured)
         }
 
         else {
-            await loadNewsPage(`pages/news/${article}.html`, newsContainer);
+            await loadNewsPage(`/guguzin-cafe-preview/pages/news/${article}.html`, newsContainer);
         }
     }
 }

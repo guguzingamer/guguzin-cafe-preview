@@ -7,8 +7,9 @@ export function init() {
 
         navOpts.forEach(link => {
             const href = link.getAttribute("href")
+            const id = link.getAttribute("id")
 
-            if (href === "") {
+            if (id === "home-nav") {
                 return
             }
             const nHref = href.replace(".html", "")
