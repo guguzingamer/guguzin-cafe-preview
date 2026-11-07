@@ -466,10 +466,19 @@ main #faq-div {
         display: block;
         border: 2px solid var(--border-group);
         border-radius: 10px;
+        overflow: hidden;
         padding: 10px;
+        padding-bottom: 0;
         
         summary {
             color: var(--text-colored);
+            list-style-type: none;
+            background: var(--background-highlight);
+            margin: -10px -10px 0 -10px;
+
+            display: flex;
+            align-items: center;
+            
             &:hover {
                 cursor: pointer;
             }
@@ -479,6 +488,18 @@ main #faq-div {
             max-height: 0;
             overflow: hidden;
             transition: max-height var(--transition-slow);
+
+            &:first-child {
+                margin-top: 10px !important;
+            }
         }
+    }
+
+    summary span {
+        transition: transform var(--transition-standard);
+    }
+
+    details[open]:not([closing]) summary span {
+        transform: rotateZ(180deg);
     }
 }

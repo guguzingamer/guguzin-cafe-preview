@@ -182,8 +182,11 @@ export async function init() {
                     answer.style.maxHeight = "0px";
                 });
 
+                details.toggleAttribute("closing")
+                
                 answer.addEventListener("transitionend", () => {
                     details.open = false
+                    details.toggleAttribute("closing")
                 }, {once: true})
             }
             else {
